@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_check_list_view.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_listview.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_login.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_register.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_stroy.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_user.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/listview.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/menu/btm_navi_menu.xml" value="0.27395833333333336" />
