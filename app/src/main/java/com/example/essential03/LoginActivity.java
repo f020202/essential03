@@ -1,7 +1,5 @@
 package com.example.essential03;
 
-
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -51,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Intent intent=new Intent(LoginActivity.this,listview.class);
+                                    Intent intent=new Intent(LoginActivity.this,MainActivity.class);
                                     startActivity(intent);
                                 }else{
                                     Toast.makeText(LoginActivity.this,"로그인 오류",Toast.LENGTH_SHORT).show();
