@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -30,7 +31,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button mLogin, mRegister;
+    Button mLogin;
+    TextView mRegister;
     EditText mEmail2, mPassword2;
     private FirebaseAuth firebaseAuth;
 
