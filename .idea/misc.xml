@@ -3,19 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_login.xml" value="0.23369565217391305" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_register.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_rank.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_stroy.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_user.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_rank.xml" value="0.12" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_user.xml" value="0.24947916666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19441375732421878" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.1765625" />
+        <entry key="app/src/main/res/font/custom_font_family.xml" value="0.1361111111111111" />
+        <entry key="app/src/main/res/font/font.xml" value="0.1361111111111111" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24072265625000006" />
+        <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_stroy.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.2007009887695312" />
         <entry key="app/src/main/res/menu/btm_navi_menu.xml" value="0.27395833333333336" />
