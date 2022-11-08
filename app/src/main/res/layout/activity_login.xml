@@ -23,11 +23,25 @@
         android:id="@+id/mLogin"
         android:text="로그인하기"
         />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/SignIn_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mRegister"
         android:text="가입하기"
+        />
+    <Button
+        android:id="@+id/SignOut_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
         />
 
 </LinearLayout>
