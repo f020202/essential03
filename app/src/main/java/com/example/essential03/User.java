@@ -2,27 +2,27 @@ package com.example.essential03;
 
 public class User {
 
-    private String title;
-    private String subtitle;
+    private String Title;
+    private String Subtitle;
 
 
 
 
-    public String getTitle() {
-        return title;
+    public String gettitle() {
+        return Title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void settitle(String Title) {
+        this.Title = Title;
     }
 
-    public String getSubtitle() {
-        return subtitle;
+    public String getsubtitle() {
+        return Subtitle;
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
+    public void setsubtitle(String Subtitle) {
+        this.Subtitle = Subtitle;
     }
 
-    public User(){}
+
 }

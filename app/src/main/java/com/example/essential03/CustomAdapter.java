@@ -9,8 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder>{
@@ -26,7 +24,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @NonNull
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_listview, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_check_list_view, parent, false);
         CustomViewHolder holder = new CustomViewHolder(view);
         return holder;
     }
@@ -34,8 +32,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
 
-        holder.tv_title.setText(arrayList.get(position).getTitle());
-        holder.tv_subtitle.setText(arrayList.get(position).getSubtitle());
+
+        holder.tv_title.setText(arrayList.get(position).gettitle());
+        holder.tv_subtitle.setText(arrayList.get(position).getsubtitle());
 
     }
 
