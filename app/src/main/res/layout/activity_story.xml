@@ -5,9 +5,21 @@
     android:gravity="center"
     android:orientation="vertical">
 
+
+    <Button
+        android:id="@+id/backbutton"
+        android:text="뒤로"
+        android:layout_width="50dp"
+        android:layout_height="61dp"
+        android:layout_below="@+id/image"
+        android:layout_gravity="left"
+        android:textSize="18dp" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
 
         <ImageView
             android:id="@+id/image"

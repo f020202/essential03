@@ -16,6 +16,7 @@ public class StoryActivity extends AppCompatActivity {
 
     ImageView imageView;
     Button button;
+    Button backButton;
 
 
     @Override
@@ -26,6 +27,8 @@ public class StoryActivity extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.image);
 
         button = (Button)findViewById(R.id.button);
+        backButton = (Button)findViewById(R.id.backbutton);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +37,12 @@ public class StoryActivity extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 startActivityForResult(intent, 1);
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { finish();
             }
         });
     }
