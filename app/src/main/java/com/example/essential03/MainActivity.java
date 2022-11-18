@@ -47,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.navigation_1) {
                 fragment = new HomeFragment();
             }else if (id == R.id.navigation_2){
-                fragment = new RankFragment();
-            }else if (id == R.id.navigation_3){
-                fragment = new StroyFragment();
+                fragment = new DiaryFragment();
             }else {
                 fragment = new UserFragment();
             }

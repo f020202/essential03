@@ -13,12 +13,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/list_Btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
@@ -29,7 +23,8 @@
             android:text="님, 안녕하세요"
             android:textColor="#2E2E2E"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
         <CalendarView
             android:layout_width="wrap_content"
@@ -40,109 +35,155 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="20dp" />
 
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/diaryTextView"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="23dp"
-            android:fontFamily="@font/apple"
-            android:textStyle="bold"
-            android:textSize="17dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <FrameLayout
-                android:layout_width="310dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:id="@+id/contextEditText"
-                    android:hint="내용을 입력하세요."
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginLeft="8dp"
-                    android:textSize="16dp"
-                    android:visibility="invisible"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:id="@+id/textView2"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:visibility="invisible"/>
-
-
-            </FrameLayout>
-
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:id="@+id/save_Btn"
-                    android:src="@drawable/check3"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:visibility="invisible"/>
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/cha_Btn"
-                        android:src="@drawable/pen"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                    <TextView
+                        android:id="@+id/diaryTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
-                        android:visibility="invisible"/>
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
 
-                    <ImageView
-                        android:src="@drawable/bin"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:id="@+id/del_Btn"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:visibility="invisible"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="#A9D0F5"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="건강한 몸 만들기"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="간단한 스트레칭" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="팔굽혀펴기" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="물 마시기" />
+
 
                 </LinearLayout>
 
 
-            </FrameLayout>
 
 
 
-        </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F5DA81"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="영어 정복"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="영단어 외우기" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="영단어 테스트" />
+
+                </LinearLayout>
 
 
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ECCEF5"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="과탑"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="복습하기 (키워드 작성)" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
 
 
     </LinearLayout>

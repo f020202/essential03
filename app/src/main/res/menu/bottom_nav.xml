@@ -9,13 +9,8 @@
 
     <item
         android:id="@+id/navigation_2"
-        android:icon="@drawable/rank"
-        android:title="랭크" />
-
-    <item
-        android:id="@+id/navigation_3"
-        android:icon="@drawable/story"
-        android:title="스토리" />
+        android:icon="@drawable/diary"
+        android:title="일기" />
 
     <item
         android:id="@+id/navigation_4"
