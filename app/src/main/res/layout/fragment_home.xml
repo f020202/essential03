@@ -56,6 +56,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/test"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <TextView
                         android:id="@+id/diaryTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -84,6 +93,7 @@
                     </LinearLayout>
 
                     <CheckBox
+                        android:id="@+id/checkbox1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="간단한 스트레칭" />
@@ -123,7 +133,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="영어 정복"
+                            android:text="영어 정복하기"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF" />
 
@@ -162,7 +172,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="과탑"
+                            android:text="과탑이 되고싶어"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF" />
 
