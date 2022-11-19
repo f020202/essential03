@@ -1,10 +1,12 @@
 package com.example.essential03;
 
 import static android.content.Context.MODE_NO_LOCALIZED_COLLATORS;
+import static android.content.Context.MODE_PRIVATE;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -22,12 +24,14 @@ import android.widget.TextView;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
 
     //캘린더 관련
     public CalendarView calendarView;
     public TextView diaryTextView,textView3;
+    public CheckBox checkBox1;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -67,19 +71,21 @@ public class HomeFragment extends Fragment {
         calendarView= v.findViewById(R.id.calendarView);
         diaryTextView= v.findViewById(R.id.diaryTextView);
         textView3=v.findViewById(R.id.textView3);
+        checkBox1 = v.findViewById(R.id.checkbox1);
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
                 diaryTextView.setText(String.format("%d년 %d월 %d일",year,month+1,dayOfMonth));
+
+
             }
         });
 
 
         return v;
     }
-
 
 
 }
