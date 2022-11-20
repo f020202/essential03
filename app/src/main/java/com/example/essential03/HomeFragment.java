@@ -1,43 +1,30 @@
 package com.example.essential03;
 
-import static android.content.Context.MODE_NO_LOCALIZED_COLLATORS;
-import static android.content.Context.MODE_PRIVATE;
-
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.Calendar;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
 
     //캘린더 관련
     public CalendarView calendarView;
     public TextView diaryTextView,textView3;
-    public CheckBox checkBox1;
+    public CheckBox checkBox1,checkBox2,checkBox3,checkBox6;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
+    private View view;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -55,23 +42,59 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
 
+    }
 
     //캘린더 여기서부터 시작
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_home, container, false);
+        //View v = inflater.inflate(R.layout.fragment_home, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
 
-        calendarView= v.findViewById(R.id.calendarView);
-        diaryTextView= v.findViewById(R.id.diaryTextView);
-        textView3=v.findViewById(R.id.textView3);
-        checkBox1 = v.findViewById(R.id.checkbox1);
+
+        calendarView= rootView.findViewById(R.id.calendarView);
+        diaryTextView= rootView.findViewById(R.id.diaryTextView);
+        textView3=rootView.findViewById(R.id.textView3);
+        checkBox1 = rootView.findViewById(R.id.checkbox1);
+        checkBox2 = rootView.findViewById(R.id.checkbox2);
+        checkBox3 = rootView.findViewById(R.id.checkbox3);
+        view = inflater.inflate(R.layout.fragment_home,container,false);
+
+
+
+
+        checkBox1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),FragmentHomeHealth1Activity.class); //fragment라서 activity intent와는 다른 방식
+                startActivity(intent);
+
+            }
+        });
+
+        checkBox2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FragmentHomeHealth2Activity.class); //fragment라서 activity intent와는 다른 방식
+                startActivity(intent);
+
+            }
+        });
+
+        checkBox3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FragmentHomeHealth3Activity.class); //fragment라서 activity intent와는 다른 방식
+                startActivity(intent);
+
+            }
+        });
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -83,8 +106,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-        return v;
+        return rootView;
     }
 
 
