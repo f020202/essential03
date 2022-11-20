@@ -36,8 +36,8 @@ public class FragmentHomeHealth1Activity extends AppCompatActivity {
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
 
-        ImageView health = (ImageView) findViewById(R.id.health1);
-        Glide.with(this).load(R.raw.health1).override(200, 200).into(health);
+        ImageView health1 = (ImageView) findViewById(R.id.health1);
+        Glide.with(this).load(R.raw.health1).override(200, 200).into(health1);
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,8 +105,4 @@ public class FragmentHomeHealth1Activity extends AppCompatActivity {
         mTextViewCountDown.setText(timeLeftFormatted);
     }
 
-    private class GlideDrawableImageViewTarget {
-        public GlideDrawableImageViewTarget(ImageView health) {
-        }
-    }
 }
