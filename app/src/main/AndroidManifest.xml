@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.essential03">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.essential03">
     <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="essential03" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.Essential03">
         <activity android:name=".FragmentHomeHealth1Activity" android:exported="true"/>
         <activity android:name=".FragmentHomeHealth2Activity" android:exported="true"/>
