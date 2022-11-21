@@ -1,11 +1,18 @@
 package com.example.essential03;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.bumptech.glide.Glide;
 
 import java.util.Locale;
 
@@ -15,6 +22,7 @@ public class FragmentHomeHealth3Activity extends AppCompatActivity {
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
+    private Button btnGoHome;
 
     private CountDownTimer mCountDownTimer;
 
@@ -28,9 +36,22 @@ public class FragmentHomeHealth3Activity extends AppCompatActivity {
         setContentView(R.layout.fragment_home_health3);
 
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
-
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
+        btnGoHome = findViewById(R.id.btnGoHome);
+
+        ImageView drink = (ImageView) findViewById(R.id.drink);
+        Glide.with(this).load(R.raw.drink).override(200, 200).into(drink);
+
+        btnGoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FragmentHomeHealth3Activity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,21 +85,21 @@ public class FragmentHomeHealth3Activity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                mButtonStartPause.setText("Start");
+                mButtonStartPause.setText("시작");
                 mButtonStartPause.setVisibility(View.INVISIBLE);
                 mButtonReset.setVisibility(View.VISIBLE);
             }
         }.start();
 
         mTimerRunning = true;
-        mButtonStartPause.setText("pause");
+        mButtonStartPause.setText("중지");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
-        mButtonStartPause.setText("Start");
+        mButtonStartPause.setText("시작");
         mButtonReset.setVisibility(View.VISIBLE);
     }
 
@@ -96,5 +117,12 @@ public class FragmentHomeHealth3Activity extends AppCompatActivity {
         String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
 
         mTextViewCountDown.setText(timeLeftFormatted);
+    }
+
+    public void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.btnGoHome, fragment);
+        fragmentTransaction.commit();
     }
 }

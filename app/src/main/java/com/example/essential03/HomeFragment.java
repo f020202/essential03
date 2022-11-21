@@ -64,6 +64,7 @@ public class HomeFragment extends Fragment {
         checkBox1 = rootView.findViewById(R.id.checkbox1);
         checkBox2 = rootView.findViewById(R.id.checkbox2);
         checkBox3 = rootView.findViewById(R.id.checkbox3);
+        checkBox6 = rootView.findViewById(R.id.checkbox6);
         view = inflater.inflate(R.layout.fragment_home,container,false);
 
 
@@ -96,13 +97,19 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        checkBox6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), assignment.class); //fragment라서 activity intent와는 다른 방식
+                startActivity(intent);
+            }
+        });
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
                 diaryTextView.setText(String.format("%d년 %d월 %d일",year,month+1,dayOfMonth));
-
-
             }
         });
 

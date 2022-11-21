@@ -4,6 +4,7 @@
         <activity android:name=".FragmentHomeHealth1Activity" android:exported="true"/>
         <activity android:name=".FragmentHomeHealth2Activity" android:exported="true"/>
         <activity android:name=".FragmentHomeHealth3Activity" android:exported="true"/>
+        <activity android:name=".assignment" android:exported="true"/>
         <activity android:name=".listview" android:exported="true"/>
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>

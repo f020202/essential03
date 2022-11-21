@@ -26,6 +26,7 @@
             android:textStyle="bold"
             android:visibility="gone"/>
 
+
         <CalendarView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,8 +73,6 @@
                         android:layout_marginRight="8dp"
                         android:textSize="17dp"
                         android:textStyle="bold" />
-
-
 
 
                     <LinearLayout
@@ -177,6 +176,7 @@
                     </LinearLayout>
 
                     <CheckBox
+                        android:id="@+id/checkbox6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="복습하기 (키워드 작성)" />

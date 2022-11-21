@@ -7,32 +7,5 @@
     android:orientation="vertical"
     tools:context=".UserFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <DatePicker
-            android:id="@+id/datePicker1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner"
-            android:layout_gravity="center" />
-
-        <EditText
-        android:id="@+id/edtDiary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="#00ff00"
-        android:lines="8"></EditText>
-
-    <Button
-        android:id="@+id/btnWrite"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-</LinearLayout>
 </FrameLayout>
