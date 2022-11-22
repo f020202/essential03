@@ -5,8 +5,11 @@ import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 
 import java.util.Locale;
 
@@ -33,6 +36,9 @@ public class FragmentHomeHealth2Activity extends AppCompatActivity {
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
         btnGoHome = findViewById(R.id.btnGoHome);
+
+        ImageView pushup = (ImageView) findViewById(R.id.pushup);
+        Glide.with(this).load(R.raw.pushup).override(200, 200).into(pushup);
 
         btnGoHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,21 +80,21 @@ public class FragmentHomeHealth2Activity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                mButtonStartPause.setText("Start");
+                mButtonStartPause.setText("시작");
                 mButtonStartPause.setVisibility(View.INVISIBLE);
                 mButtonReset.setVisibility(View.VISIBLE);
             }
         }.start();
 
         mTimerRunning = true;
-        mButtonStartPause.setText("pause");
+        mButtonStartPause.setText("중지");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
-        mButtonStartPause.setText("Start");
+        mButtonStartPause.setText("시작");
         mButtonReset.setVisibility(View.VISIBLE);
     }
 

@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="찌뿌둥한 몸을 개운하게!"
+                android:text="복근을 향하여..."
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="22dp"
@@ -31,12 +31,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="가벼운 스트레칭으로"/>
+                android:text="매일 꾸준한 팔굽혀펴기를 통해"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="상쾌한 하루를 맞이해보세요"/>
+                android:text="더욱 건강한 몸으로"/>
 
 
         </LinearLayout>
@@ -44,9 +44,9 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="18dp"
             android:src="@drawable/exercise"
-            android:layout_marginLeft="40dp"/>
+            android:layout_marginLeft="70dp"/>
 
     </LinearLayout>
 
@@ -86,7 +86,7 @@
 
 
     <ImageView
-        android:id="@+id/drink"
+        android:id="@+id/pushup"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:layout_marginTop="20dp"/>

@@ -5,179 +5,72 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".UserFragment">
+    tools:context=".UserFragment"
+    android:padding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="40dp"
-            android:text="My Diary"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_marginLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="날짜를선택해 일기를 작성해보세요"
-            android:textSize="14dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="40dp"
+                    android:text="My Diary"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="날짜를선택해 일기를 작성해보세요"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/notepad"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="43dp"/>
+
+
+        </LinearLayout>
+
+
 
         <DatePicker
             android:id="@+id/datePicker1"
             android:layout_width="wrap_content"
-            android:layout_height="142dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
             android:calendarViewShown="false"
+            android:layout_marginTop="30dp"
             android:datePickerMode="spinner" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/image_happy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="#ffffff"
-                    android:src="@drawable/emoji_selector" />
-
-
-                <TextView
-                    android:id="@+id/point1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="happy" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:src="@drawable/r1" />
-
-
-                <TextView
-                    android:id="@+id/emotion2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="n point" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:src="@drawable/r1" />
-
-
-                <TextView
-                    android:id="@+id/emotion3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="n point" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:src="@drawable/r1" />
-
-
-                <TextView
-                    android:id="@+id/emotion4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="n point" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:src="@drawable/r1" />
-
-
-                <TextView
-                    android:id="@+id/emotion5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="n point" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
         <TextView
             android:id="@+id/textTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="30dp"
             android:text="당신의 오늘은 어떠셨나요?"
             android:textColor="#000000"

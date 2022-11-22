@@ -66,7 +66,6 @@ public class DiaryFragment extends Fragment {
         dp = (DatePicker) view.findViewById(R.id.datePicker1);
         edtDiary = (EditText) view.findViewById(R.id.edtDiary);
         btnWrite = (Button) view.findViewById(R.id.btnWrite);
-        happy = (ImageView) view.findViewById(R.id.image_happy);
 
         Calendar cal = Calendar.getInstance();
         int cYear = cal.get(Calendar.YEAR);

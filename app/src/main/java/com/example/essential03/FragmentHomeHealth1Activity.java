@@ -78,21 +78,21 @@ public class FragmentHomeHealth1Activity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                mButtonStartPause.setText("Start");
+                mButtonStartPause.setText("시작");
                 mButtonStartPause.setVisibility(View.INVISIBLE);
                 mButtonReset.setVisibility(View.VISIBLE);
             }
         }.start();
 
         mTimerRunning = true;
-        mButtonStartPause.setText("pause");
+        mButtonStartPause.setText("중지");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
-        mButtonStartPause.setText("Start");
+        mButtonStartPause.setText("시작");
         mButtonReset.setVisibility(View.VISIBLE);
     }
 

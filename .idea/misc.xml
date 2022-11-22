@@ -23,7 +23,7 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home.xml" value="0.3104166666666667" />
         <entry key="app/src/main/res/drawable/border_layout.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/border_layout2.xml" value="0.162" />
-        <entry key="app/src/main/res/layout/activity_assignment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_assignment.xml" value="0.23415985107421877" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19441375732421878" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22056159420289856" />
@@ -32,8 +32,8 @@
         <entry key="app/src/main/res/layout/fragment_diary.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home_health1.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_home_health2.xml" value="0.25791015625" />
-        <entry key="app/src/main/res/layout/fragment_home_health3.xml" value="0.19725036621093747" />
+        <entry key="app/src/main/res/layout/fragment_home_health2.xml" value="0.26133422851562493" />
+        <entry key="app/src/main/res/layout/fragment_home_health3.xml" value="0.27810211181640626" />
         <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.1765625" />
         <entry key="app/src/main/res/layout/fragment_stroy.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.2007009887695312" />
