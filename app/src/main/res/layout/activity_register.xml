@@ -11,37 +11,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="회원가입"
-        android:textSize="30dp"
+        android:textSize="27dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:textColor="#000000"
         android:textStyle="bold"
         />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:id="@+id/mName"
         android:hint="Name"
+        android:background="@drawable/border_layout"
+        android:elevation="2dp"
         />
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/mEmail"
+        android:background="@drawable/border_layout"
+        android:elevation="2dp"
         android:hint="Email"
         />
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/mPassword"
         android:hint="Password"
+        android:background="@drawable/border_layout"
+        android:elevation="2dp"
         android:inputType="textPassword"
         />
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:id="@+id/mPasswordCheck"
+        android:layout_marginTop="10dp"
         android:hint="PasswordCheck"
+        android:background="@drawable/border_layout"
+        android:elevation="2dp"
         android:inputType="textPassword"
         />
     <TextView
@@ -62,6 +73,17 @@
         android:id="@+id/register"
         android:text="가입하기"
         />
+
+
+    <Button
+        android:id="@+id/btnGoHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D8D8D8"
+        android:layout_marginTop="5dp"
+        android:text="홈으로 돌아가기"
+        android:textColor="#000000"/>
+
 
 
 

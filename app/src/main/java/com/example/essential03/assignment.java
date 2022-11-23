@@ -1,6 +1,7 @@
 package com.example.essential03;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class assignment extends AppCompatActivity {
 
     DatePicker dp;
     EditText edit1, edit2, edit3;
-    Button Wrtbtn1;
+    Button Wrtbtn1,btnGoHome;
     String fileName, fileName2, fileName3;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class assignment extends AppCompatActivity {
         edit2 = (EditText) findViewById(R.id.edit2);
         edit3 = (EditText) findViewById(R.id.edit3);
         Wrtbtn1 = (Button) findViewById(R.id.Wrtbtn1);
+        btnGoHome = (Button) findViewById(R.id.btnGoHome);
 
 
 
@@ -54,6 +56,14 @@ public class assignment extends AppCompatActivity {
         fileName3 = Integer.toString(cYear) + "_" + Integer.toString(cMonth + 1)
                 + "_" + Integer.toString(cDay) + "_3.txt";
         String str3 = readDiary(fileName3);
+
+        btnGoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(assignment.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         dp.init(cYear, cMonth, cDay, new DatePicker.OnDateChangedListener() {
