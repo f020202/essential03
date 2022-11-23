@@ -32,8 +32,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity {
 
     Button mLogin;
-    TextView mRegister;
     EditText mEmail2, mPassword2;
+    TextView mRegister;
     private FirebaseAuth firebaseAuth;
 
     private SignInButton signInButton;
@@ -50,18 +50,22 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        mRegister = findViewById(R.id.mRegister);
         mLogin = findViewById(R.id.mLogin);
         mEmail2 = findViewById(R.id.mEmail2);
         mPassword2 = findViewById(R.id.mPassword2);
+        mRegister = findViewById(R.id.mRegister);
+
 
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(LoginActivity.this, RegisterActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(intent);
             }
         });
+
+
+
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -62,7 +62,7 @@
             android:layout_height="130dp"
             android:layout_gravity="center"
             android:calendarViewShown="false"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:datePickerMode="spinner" />
 
 
@@ -70,7 +70,7 @@
             android:id="@+id/textTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp"
             android:text="당신의 오늘은 어떠셨나요?"
             android:textColor="#000000"
@@ -80,13 +80,13 @@
             android:id="@+id/edtDiary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="@drawable/border_layout"
-            android:elevation="10dp"
+            android:elevation="2dp"
             android:gravity="top"
             android:lines="8"></EditText>
 
@@ -94,8 +94,8 @@
             android:id="@+id/btnWrite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
             android:text="저장하기" />

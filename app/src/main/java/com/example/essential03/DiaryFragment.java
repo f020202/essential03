@@ -5,6 +5,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -14,13 +19,6 @@ import java.io.IOException;
 import java.util.Calendar;
 
 
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-
 public class DiaryFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
@@ -28,6 +26,13 @@ public class DiaryFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
+
+    private View view;
+    private Button ss;
+
+
+
+
 
     public DiaryFragment() {
         // Required empty public constructor

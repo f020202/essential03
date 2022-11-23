@@ -5,24 +5,22 @@ public class User {
     private String Title;
     private String Subtitle;
 
+    public User(){}
 
 
-
-    public String gettitle() {
+    public String getTitle() {
         return Title;
     }
 
-    public void settitle(String Title) {
-        this.Title = Title;
+    public void setTitle(String title) {
+        Title = title;
     }
 
-    public String getsubtitle() {
+    public String getSubtitle() {
         return Subtitle;
     }
 
-    public void setsubtitle(String Subtitle) {
-        this.Subtitle = Subtitle;
+    public void setSubtitle(String subtitle) {
+        Subtitle = subtitle;
     }
-
-
 }

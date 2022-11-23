@@ -1,9 +1,5 @@
 package com.example.essential03;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,19 +26,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG="RegisterActivity";
     EditText mName,mEmail,mPassword,mPasswordCheck;
-    Button register;
+    Button register,btnGoHome;
     private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        ActionBar actionBar=getSupportActionBar();
-        actionBar.setTitle("Create Account");
-
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
 
         firebaseAuth=FirebaseAuth.getInstance();
 
@@ -48,6 +41,15 @@ public class RegisterActivity extends AppCompatActivity {
         mPasswordCheck=findViewById(R.id.mPasswordCheck);
         register=findViewById(R.id.register);
         mName=findViewById(R.id.mName);
+        btnGoHome=findViewById(R.id.btnGoHome);
+
+        btnGoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -65,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
                     firebaseAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()) {
+                            if (task.isSuccessful()) {
                                 mDialog.dismiss();
 
                                 FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -73,29 +75,35 @@ public class RegisterActivity extends AppCompatActivity {
                                 String uid = user.getUid();
                                 String name = mName.getText().toString().trim();
 
-                                HashMap<Object, String> hashMap = new HashMap<>();
+                                //해쉬맵 테이블을 파이어베이스 데이터베이스에 저장
+                                HashMap<Object,String> hashMap = new HashMap<>();
 
-                                hashMap.put("uid", uid);
-                                hashMap.put("email", email);
-                                hashMap.put("name", name);
+                                hashMap.put("uid",uid);
+                                hashMap.put("email",email);
+                                hashMap.put("name",name);
 
                                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                                 DatabaseReference reference = database.getReference("Users");
                                 reference.child(uid).setValue(hashMap);
 
-                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+
+                                //가입이 이루어져을시 가입 화면을 빠져나감.
+                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                                 Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
-                            }else{
+
+                            } else {
                                 mDialog.dismiss();
-                                Toast.makeText(RegisterActivity.this,"이미 존재하는 아이디입니다.",Toast.LENGTH_SHORT).show();
-                                return;
+                                Toast.makeText(RegisterActivity.this, "이미 존재하는 아이디 입니다.", Toast.LENGTH_SHORT).show();
+                                return;  //해당 메소드 진행을 멈추고 빠져나감.
+
                             }
+
                         }
                     });
                 }else{
-                    Toast.makeText(RegisterActivity.this,"비밀번호가 틀렸습니다. 다시 입력해주세요.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "비밀번호가 틀렸습니다. 다시 입력해 주세요.", Toast.LENGTH_SHORT).show();
                     return;
                 }
             }

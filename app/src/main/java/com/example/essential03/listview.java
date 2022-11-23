@@ -49,6 +49,7 @@ public class listview extends AppCompatActivity {
                 arrayList.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user = snapshot.getValue(User.class);
+                    Log.i("test",user.getTitle());
                     arrayList.add(user);
                 }
                 adapter.notifyDataSetChanged();

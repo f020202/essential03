@@ -17,7 +17,7 @@ public class HomeFragment extends Fragment {
     //캘린더 관련
     public CalendarView calendarView;
     public TextView diaryTextView,textView3;
-    public CheckBox checkBox1,checkBox2,checkBox3,checkBox6;
+    public CheckBox checkBox1,checkBox2,checkBox3,checkBox4, checkBox6;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -64,6 +64,7 @@ public class HomeFragment extends Fragment {
         checkBox1 = rootView.findViewById(R.id.checkbox1);
         checkBox2 = rootView.findViewById(R.id.checkbox2);
         checkBox3 = rootView.findViewById(R.id.checkbox3);
+        checkBox4 = rootView.findViewById(R.id.checkbox4);
         checkBox6 = rootView.findViewById(R.id.checkbox6);
         view = inflater.inflate(R.layout.fragment_home,container,false);
 
@@ -96,6 +97,16 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+        checkBox4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), english.class); //fragment라서 activity intent와는 다른 방식
+                startActivity(intent);
+
+            }
+        });
+
 
         checkBox6.setOnClickListener(new View.OnClickListener() {
             @Override
