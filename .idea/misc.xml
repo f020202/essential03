@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_assignment.xml" value="0.17274569402228976" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_check_list_view.xml" value="0.17274569402228976" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_english.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_english.xml" value="0.22" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_english_test.xml" value="0.17274569402228976" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_main.xml" value="0.17274569402228976" />
@@ -16,9 +16,10 @@
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home_health2.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home_health3.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_main.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_main2.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_rank.xml" value="0.17274569402228976" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_user.xml" value="0.1" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/todo_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/todo_item.xml" value="0.22" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/drawable/border_layout.xml" value="0.1" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/drawable/diary.xml" value="0.1295" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/drawable/edittext_rounded_corner_rectangle.xml" value="0.1295" />
