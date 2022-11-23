@@ -118,7 +118,7 @@ public class assignment extends AppCompatActivity {
                     outFs3.write(str3.getBytes());
                     outFs3.close();
 
-                    Toast.makeText(getApplicationContext(), fileName + "이 저장됨", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),  "키워드가 저장됐어요!", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                 }
             }

@@ -80,6 +80,7 @@ public class DiaryFragment extends Fragment {
 
         fileName = Integer.toString(cYear) + "_" + Integer.toString(cMonth+1)
                 + "_" + Integer.toString(cDay) + ".txt";
+
         String str = readDiary(fileName);
         edtDiary.setText(str);
 
@@ -102,8 +103,7 @@ public class DiaryFragment extends Fragment {
                     String str = edtDiary.getText().toString();
                     outFs.write(str.getBytes());
                     outFs.close();
-                    Toast.makeText(getActivity().getApplicationContext(),
-                            fileName + " 이  저장됨", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "일기가 저장됐어요!", Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                 }
             }
