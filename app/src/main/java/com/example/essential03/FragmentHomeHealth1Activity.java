@@ -38,10 +38,6 @@ public class FragmentHomeHealth1Activity extends AppCompatActivity {
         mButtonReset = findViewById(R.id.button_reset);
         btnGoHome = findViewById(R.id.btnGoHome);
 
-        ImageView health1 = (ImageView) findViewById(R.id.health1);
-        Glide.with(this).load(R.raw.health1).override(200, 200).into(health1);
-
-
         btnGoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
