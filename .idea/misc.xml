@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_assignment.xml" value="0.17274569402228976" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_check_list_view.xml" value="0.17274569402228976" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_english.xml" value="0.22" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_english.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_english_test.xml" value="0.17274569402228976" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/activity_main.xml" value="0.17274569402228976" />
@@ -16,10 +16,9 @@
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home_health2.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home_health3.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_main.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_main2.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_rank.xml" value="0.17274569402228976" />
         <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_user.xml" value="0.1" />
-        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/todo_item.xml" value="0.22" />
+        <entry key="..\:/Users/37056/AndroidStudioProjects/essential03/app/src/main/res/layout/todo_item.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/drawable/border_layout.xml" value="0.1" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/drawable/diary.xml" value="0.1295" />
         <entry key="..\:/Users/82102/AndroidStudioProjects/essential03/app/src/main/res/drawable/edittext_rounded_corner_rectangle.xml" value="0.1295" />
@@ -40,8 +39,13 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/essential03/app/src/main/res/layout/fragment_home.xml" value="0.3104166666666667" />
         <entry key="app/src/main/res/drawable/border_layout.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/border_layout2.xml" value="0.162" />
+<<<<<<<<< Temporary merge branch 1
+        <entry key="app/src/main/res/layout/activity_assignment.xml" value="0.23415985107421877" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.21623382568359378" />
+=========
         <entry key="app/src/main/res/layout/activity_assignment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+>>>>>>>>> Temporary merge branch 2
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19441375732421878" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/activity_story.xml" value="0.10277777777777777" />
@@ -49,11 +53,16 @@
         <entry key="app/src/main/res/layout/fragment_diary.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home_health1.xml" value="0.1" />
+<<<<<<<<< Temporary merge branch 1
+        <entry key="app/src/main/res/layout/fragment_home_health2.xml" value="0.26133422851562493" />
+        <entry key="app/src/main/res/layout/fragment_home_health3.xml" value="0.2577017211914063" />
+=========
         <entry key="app/src/main/res/layout/fragment_home_health2.xml" value="0.25791015625" />
         <entry key="app/src/main/res/layout/fragment_home_health3.xml" value="0.19725036621093747" />
+>>>>>>>>> Temporary merge branch 2
         <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.1765625" />
         <entry key="app/src/main/res/layout/fragment_stroy.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.2007009887695312" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.25065963060686014" />
         <entry key="app/src/main/res/layout/second.xml" value="0.1" />
         <entry key="app/src/main/res/menu/btm_navi_menu.xml" value="0.27395833333333336" />
       </map>
