@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".RankFragment"
+    tools:context="edu.sungshin.essential.RankFragment"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        tools:context=".MainActivity"
+        tools:context="edu.sungshin.essential.MainActivity"
         android:orientation="vertical">
 
         <DigitalClock

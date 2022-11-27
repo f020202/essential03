@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".UserFragment"
+    tools:context="edu.sungshin.essential.UserFragment"
     android:padding="10dp">
 
     <LinearLayout

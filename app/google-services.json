@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:555096584629:android:76a2ec41766dee64a629fc",
         "android_client_info": {
-          "package_name": "com.example.essential03"
+          "package_name": "edu.sungshin.essential"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "555096584629-1l0fc6fllpdtj805oo6foeuu8ui5b903.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.essential03",
+            "package_name": "edu.sungshin.essential",
             "certificate_hash": "03a124271e74b4924364d1ad07cf0e52011aa8ca"
           }
         },
@@ -26,7 +26,7 @@
           "client_id": "555096584629-ac60i5q0t3m3pqfh4v9e07suglsvs222.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.essential03",
+            "package_name": "edu.sungshin.essential",
             "certificate_hash": "c44026e49e72ec6761458e78d76adfb04517c03c"
           }
         },
@@ -34,7 +34,7 @@
           "client_id": "555096584629-enjcja9gu8ve0jufr5sebfcnq83qidjb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.essential03",
+            "package_name": "edu.sungshin.essential",
             "certificate_hash": "e71af260489aae14dc8a8f22a37f0f1a1aa2b530"
           }
         },
@@ -42,7 +42,7 @@
           "client_id": "555096584629-j96mc7u5h9d7m5t1mf1q3d6s5lg1ie7v.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.essential03",
+            "package_name": "edu.sungshin.essential",
             "certificate_hash": "e881f08710d77b58ca54fc916e8eecd8d202a142"
           }
         },
@@ -50,7 +50,7 @@
           "client_id": "555096584629-vcro6tgq4pgu1jfjvjk2h4pi86h2617g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.essential03",
+            "package_name": "edu.sungshin.essential",
             "certificate_hash": "5172c8a18dcc00779da41996b6d5e35e2c1f9428"
           }
         },

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.essential03.FragmentHomeHealth3Activity"
+    tools:context="com.example.essential03.com.essential.essential03.FragmentHomeHealth3Activity"
     android:orientation="vertical">
 
 

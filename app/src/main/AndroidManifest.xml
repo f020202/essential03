@@ -1,18 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.essential03">
     <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="essential03" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.Essential03">
-        <activity android:name=".FragmentHomeHealth1Activity" android:exported="true"/>
-        <activity android:name=".FragmentHomeHealth2Activity" android:exported="true"/>
-        <activity android:name=".FragmentHomeHealth3Activity" android:exported="true"/>
-        <activity android:name=".assignment" android:exported="true"/>
-        <activity android:name=".listview" android:exported="true"/>
-        <activity android:name=".english" android:exported="true"/>
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity android:name="edu.sungshin.essential.FragmentHomeHealth1Activity" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.FragmentHomeHealth2Activity" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.FragmentHomeHealth3Activity" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.assignment" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.listview" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.english" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.ChallengeActivity1" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.ChallengeActivity2" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.ChallengeActivity3" android:exported="true"/>
+        <activity android:name="edu.sungshin.essential.googlelogin_test" android:exported="true">
+
 
 
 
         </activity>
-        <activity android:name=".LoginActivity" android:exported="true">
+        <activity android:name="edu.sungshin.essential.MainActivity" android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,7 +24,12 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".RegisterActivity" android:exported="true">
+        <activity android:name="edu.sungshin.essential.LoginActivity" android:exported="true">
+
+
+
+        </activity>
+        <activity android:name="edu.sungshin.essential.RegisterActivity" android:exported="true">
 
 
         </activity>
