@@ -18,15 +18,14 @@
         </activity>
         <activity android:name="edu.sungshin.essential.MainActivity" android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
 
         </activity>
         <activity android:name="edu.sungshin.essential.LoginActivity" android:exported="true">
 
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
 
         </activity>
         <activity android:name="edu.sungshin.essential.RegisterActivity" android:exported="true">
