@@ -23,7 +23,6 @@ public class FragmentHomeHealth3Activity extends AppCompatActivity {
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
-    private Button btnGoHome;
 
     private CountDownTimer mCountDownTimer;
 
@@ -39,18 +38,11 @@ public class FragmentHomeHealth3Activity extends AppCompatActivity {
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
-        btnGoHome = findViewById(R.id.btnGoHome);
 
         ImageView drink = (ImageView) findViewById(R.id.drink);
         Glide.with(this).load(R.raw.drink).override(200, 200).into(drink);
 
-        btnGoHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FragmentHomeHealth3Activity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 

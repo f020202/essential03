@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/navigation_1"
-        android:icon="@drawable/home"
+        android:icon="@drawable/target"
         android:title="챌린지" />
 
 
     <item
         android:id="@+id/navigation_2"
-        android:icon="@drawable/diary"
+        android:icon="@drawable/calendar"
         android:title="캘린더" />
 
 

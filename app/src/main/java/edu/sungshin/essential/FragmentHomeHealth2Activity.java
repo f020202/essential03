@@ -20,7 +20,6 @@ public class FragmentHomeHealth2Activity extends AppCompatActivity {
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
-    private Button btnGoHome;
 
     private CountDownTimer mCountDownTimer;
 
@@ -36,18 +35,11 @@ public class FragmentHomeHealth2Activity extends AppCompatActivity {
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
-        btnGoHome = findViewById(R.id.btnGoHome);
 
         ImageView pushup = (ImageView) findViewById(R.id.pushup);
         Glide.with(this).load(R.raw.pushup).override(200, 200).into(pushup);
 
-        btnGoHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FragmentHomeHealth2Activity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override

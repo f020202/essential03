@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private String TAG = "mainTag";
     private FirebaseAuth mAuth;
-    private int RC_SIGN_IN = 123;
+    private static final int REQ_SIGN_GOOGLE = 200; // 구글 로그인 결과 코드
 
     Button signOutButton;
 
@@ -78,6 +78,15 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("Email", email);
+                                    UserFragment userFragment=new UserFragment();
+                                    userFragment.setArguments(bundle);
+
+                                    intent.putExtras(bundle);
+
+
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(LoginActivity.this, "로그인 오류", Toast.LENGTH_SHORT).show();
@@ -98,7 +107,8 @@ public class LoginActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        // [END config_signin]
+        // [END config_s
+        // ignin]
 
         // [START initialize_auth]
         // Initialize Firebase Auth
@@ -108,7 +118,8 @@ public class LoginActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, REQ_SIGN_GOOGLE);
 
             }
         });
@@ -142,16 +153,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == REQ_SIGN_GOOGLE) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account);
-            } catch (ApiException e) {
-                // Google Sign In failed, update UI appropriately
-                Log.w(TAG, "Google sign in failed", e);
-                Toast.makeText(getApplicationContext(), "Google sign in Failed", Toast.LENGTH_LONG).show();
+            if(task.isSuccessful()){
+                GoogleSignInAccount account = task.getResult(); // account 라는 데이터는 구글 로그인 정보를 담고있다. (닉네임 프로필 사진url, 이메일주소등등..)
+                firebaseAuthWithGoogle(account); // 로그인 결과 값 출력 수행하라는 메소드
             }
         }
     }
@@ -183,17 +189,13 @@ public class LoginActivity extends AppCompatActivity {
                             bundle.putString("photoUrl",String.valueOf(acct.getPhotoUrl()));
 
                             bundle.putString("e-mail",acct.getEmail());
-                            UserFrament userFragment=new UserFrament();
+                            UserFragment userFragment=new UserFragment();
                             userFragment.setArguments(bundle);
 
                             intent.putExtras(bundle);
 
                             startActivity(intent);
 
-
-//                            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-//
-//                            startActivity(intent);
 
                             Toast.makeText(getApplicationContext(), "Complete", Toast.LENGTH_LONG).show();
 
@@ -217,7 +219,7 @@ public class LoginActivity extends AppCompatActivity {
     // [START signin]
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+        startActivityForResult(signInIntent, REQ_SIGN_GOOGLE);
     }
     // [END signin]
 

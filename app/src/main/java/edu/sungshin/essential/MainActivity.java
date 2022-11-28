@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }else if (id == R.id.navigation_3){
                 fragment = new DiaryFragment();
             } else {
-                fragment = new UserFrament();
+                fragment = new UserFragment();
             }
             fragmentTransaction.add(R.id.content_layout, fragment, tag);
         } else {

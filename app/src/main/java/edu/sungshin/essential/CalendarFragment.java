@@ -1,28 +1,40 @@
 package edu.sungshin.essential;
 
+import static android.content.Context.MODE_NO_LOCALIZED_COLLATORS;
 
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CalendarView;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.bumptech.glide.Glide;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.example.essential03.R;
-import com.google.firebase.auth.FirebaseAuth;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class CalendarFragment extends Fragment {
 
+    //캘린더 관련
+    public String fname=null;
+    public String str=null;
     public CalendarView calendarView;
-    public TextView diaryTextView,textView3;
-    public TextView checkBox1, checkBox2,checkBox3,checkBox4, checkBox6;
-    public ImageView arrow1,arrow2,arrow3,arrow4,arrow6;
+    public ImageView save_Btn,cha_Btn,del_Btn;
+    public TextView diaryTextView,textView2,textView3;
+    public EditText contextEditText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,137 +48,147 @@ public class CalendarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //View v = inflater.inflate(R.layout.fragment_calendar, container, false);
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_calendar, container, false);
 
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        String date = format.format(Calendar.getInstance().getTime());
 
-        calendarView= rootView.findViewById(R.id.calendarView);
-        diaryTextView= rootView.findViewById(R.id.diaryTextView);
-        textView3=rootView.findViewById(R.id.textView3);
-        checkBox1 = rootView.findViewById(R.id.checkbox1);
-        checkBox2 = rootView.findViewById(R.id.checkbox2);
-        checkBox3 = rootView.findViewById(R.id.checkbox3);
-        checkBox4 = rootView.findViewById(R.id.checkbox4);
-        checkBox6 = rootView.findViewById(R.id.checkbox6);
-        arrow1 = rootView.findViewById(R.id.arrow1);
-        arrow2 = rootView.findViewById(R.id.arrow2);
-        arrow3 = rootView.findViewById(R.id.arrow3);
-        arrow4 = rootView.findViewById(R.id.arrow4);
-        arrow6 = rootView.findViewById(R.id.arrow6);
+        View v = inflater.inflate(R.layout.fragment_calendar, container, false);
 
+        calendarView= v.findViewById(R.id.calendarView);
+        diaryTextView= v.findViewById(R.id.diaryTextView);
+        save_Btn = v.findViewById(R.id.save_Btn);
+        del_Btn = v.findViewById(R.id.del_Btn);
+        cha_Btn=v.findViewById(R.id.cha_Btn);
+        textView2=v.findViewById(R.id.textView2);
+        textView3=v.findViewById(R.id.textView3);
+        contextEditText=v.findViewById(R.id.contextEditText);
 
-
-        //간단한 스트레칭
-        checkBox1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),FragmentHomeHealth1Activity.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-        //간단한 스트레칭 화살표
-        arrow1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),FragmentHomeHealth1Activity.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-            }
-        });
-
-        //팔굽혀펴기
-        checkBox2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), FragmentHomeHealth2Activity.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-        //팔굽혀펴기 화살표
-        arrow2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), FragmentHomeHealth2Activity.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-
-        //물마시기
-        checkBox3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), FragmentHomeHealth3Activity.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-        //물마시기 화살표
-        arrow3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), FragmentHomeHealth3Activity.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-        //영단어 외우기
-        checkBox4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), english.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-        //영단어 외우기 화살표
-        arrow4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), english.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-
-            }
-        });
-
-
-        //복습하기
-        checkBox6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), assignment.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-            }
-        });
-
-        //복습하기 화살표
-        arrow6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), assignment.class); //fragment라서 activity intent와는 다른 방식
-                startActivity(intent);
-            }
-        });
-
+        Intent intent=getActivity().getIntent();
+        String name=intent.getStringExtra("userName");
+        final String userID=intent.getStringExtra("userID");
+        textView3.setText(name+"님, 안녕하세요");
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
+                save_Btn.setVisibility(View.VISIBLE);
+                contextEditText.setVisibility(View.VISIBLE);
+                textView2.setVisibility(View.INVISIBLE);
+                cha_Btn.setVisibility(View.INVISIBLE);
+                del_Btn.setVisibility(View.INVISIBLE);
                 diaryTextView.setText(String.format("%d년 %d월 %d일",year,month+1,dayOfMonth));
+                contextEditText.setText("");
+                checkDay(year,month,dayOfMonth,userID);
+            }
+        });
+        save_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveDiary(fname);
+                str=contextEditText.getText().toString();
+                textView2.setText(str);
+                save_Btn.setVisibility(View.INVISIBLE);
+                cha_Btn.setVisibility(View.VISIBLE);
+                del_Btn.setVisibility(View.VISIBLE);
+                contextEditText.setVisibility(View.INVISIBLE);
+                textView2.setVisibility(View.VISIBLE);
+
             }
         });
 
-        return rootView;
+        return v;
     }
 
+    public void  checkDay(int cYear,int cMonth,int cDay,String userID){
+        fname=""+userID+cYear+"-"+(cMonth+1)+""+"-"+cDay+".txt";//저장할 파일 이름설정
+        FileInputStream fis=null;//FileStream fis 변수
+
+        try{
+            fis=getActivity().openFileInput(fname);
+
+            byte[] fileData=new byte[fis.available()];
+            fis.read(fileData);
+            fis.close();
+
+            str=new String(fileData);
+
+            contextEditText.setVisibility(View.INVISIBLE);
+            textView2.setVisibility(View.VISIBLE);
+            textView2.setText(str);
+
+            save_Btn.setVisibility(View.INVISIBLE);
+            cha_Btn.setVisibility(View.VISIBLE);
+            del_Btn.setVisibility(View.VISIBLE);
+
+            cha_Btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    contextEditText.setVisibility(View.VISIBLE);
+                    textView2.setVisibility(View.INVISIBLE);
+                    contextEditText.setText(str);
+
+                    save_Btn.setVisibility(View.VISIBLE);
+                    cha_Btn.setVisibility(View.INVISIBLE);
+                    del_Btn.setVisibility(View.INVISIBLE);
+                    textView2.setText(contextEditText.getText());
+                }
+
+            });
+            del_Btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    textView2.setVisibility(View.INVISIBLE);
+                    contextEditText.setText("");
+                    contextEditText.setVisibility(View.VISIBLE);
+                    save_Btn.setVisibility(View.VISIBLE);
+                    cha_Btn.setVisibility(View.INVISIBLE);
+                    del_Btn.setVisibility(View.INVISIBLE);
+                    removeDiary(fname);
+                }
+            });
+            if(textView2.getText()==null){
+                textView2.setVisibility(View.INVISIBLE);
+                diaryTextView.setVisibility(View.VISIBLE);
+                save_Btn.setVisibility(View.VISIBLE);
+                cha_Btn.setVisibility(View.INVISIBLE);
+                del_Btn.setVisibility(View.INVISIBLE);
+                contextEditText.setVisibility(View.VISIBLE);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    @SuppressLint("WrongConstant")
+    public void removeDiary(String readDay){
+        FileOutputStream fos=null;
+
+        try{
+            fos=getActivity().openFileOutput(readDay,MODE_NO_LOCALIZED_COLLATORS);
+            String content="";
+            fos.write((content).getBytes());
+            fos.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    @SuppressLint("WrongConstant")
+    public void saveDiary(String readDay){
+        FileOutputStream fos=null;
+
+        try{
+            fos=getActivity().openFileOutput(readDay,MODE_NO_LOCALIZED_COLLATORS);
+            String content=contextEditText.getText().toString();
+            fos.write((content).getBytes());
+            fos.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+
 }
-
-

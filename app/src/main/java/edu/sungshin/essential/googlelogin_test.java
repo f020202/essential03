@@ -62,7 +62,7 @@ public class googlelogin_test extends AppCompatActivity {
         mAuth.signInWithCredential(credential) .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override public void onComplete(@NonNull Task<AuthResult> task) { // 로그인이 성공하면 닉네임, 프로필사진, 이메일 정보등을 task에 저장한 후 ResultActivity로 넘김.
                 if(task.isSuccessful()) { Toast.makeText(googlelogin_test.this, "로그인 성공~!!!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), UserFrament.class);
+                    Intent intent = new Intent(getApplicationContext(), UserFragment.class);
 //                    Bundle bundle=new Bundle();
 //                    bundle.putString("nickname",account.getDisplayName());
 //                    bundle.putString("photoUrl",String.valueOf(account.getPhotoUrl()));
