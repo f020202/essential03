@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "555096584629-fra2bfsb73utplhbsn6p9qcnsgmu96js.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.sungshin.essential",
+            "certificate_hash": "c44026e49e72ec6761458e78d76adfb04517c03c"
+          }
+        },
+        {
+          "client_id": "555096584629-i84mrrh2v795c8iicrkcnab1sr22bv5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.sungshin.essential",
+            "certificate_hash": "e71af260489aae14dc8a8f22a37f0f1a1aa2b530"
+          }
+        },
+        {
           "client_id": "555096584629-kim1ih622qjhbv1a82mvv6c1fg3hudrv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -23,23 +39,7 @@
           }
         },
         {
-          "client_id": "555096584629-ac60i5q0t3m3pqfh4v9e07suglsvs222.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "edu.sungshin.essential",
-            "certificate_hash": "c44026e49e72ec6761458e78d76adfb04517c03c"
-          }
-        },
-        {
-          "client_id": "555096584629-enjcja9gu8ve0jufr5sebfcnq83qidjb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "edu.sungshin.essential",
-            "certificate_hash": "e71af260489aae14dc8a8f22a37f0f1a1aa2b530"
-          }
-        },
-        {
-          "client_id": "555096584629-j96mc7u5h9d7m5t1mf1q3d6s5lg1ie7v.apps.googleusercontent.com",
+          "client_id": "555096584629-ns19hs7qoejp356f6nontfbrelhr8j4f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "edu.sungshin.essential",
@@ -47,7 +47,7 @@
           }
         },
         {
-          "client_id": "555096584629-vcro6tgq4pgu1jfjvjk2h4pi86h2617g.apps.googleusercontent.com",
+          "client_id": "555096584629-oh4mvt6rntm5v7v42a26522qcmo9h74r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "edu.sungshin.essential",
@@ -83,14 +83,6 @@
         }
       },
       "oauth_client": [
-        {
-          "client_id": "555096584629-307r5crbgdhb7f3pm1mgik5k4vvhvu2h.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.kakao_login",
-            "certificate_hash": "e71af260489aae14dc8a8f22a37f0f1a1aa2b530"
-          }
-        },
         {
           "client_id": "555096584629-rhdjlaetmsb4l4tq4hsin3839jj0564i.apps.googleusercontent.com",
           "client_type": 3

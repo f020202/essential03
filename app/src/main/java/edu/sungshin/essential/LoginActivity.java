@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static final int REQ_SIGN_GOOGLE = 200; // 구글 로그인 결과 코드
 
-    Button signOutButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     Bundle bundle = new Bundle();
                                     bundle.putString("Email", email);
+
                                     UserFragment userFragment=new UserFragment();
                                     userFragment.setArguments(bundle);
 
@@ -94,7 +95,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
         signInButton = findViewById(R.id.SignIn_Button);
-        signOutButton = (Button) findViewById(R.id.SignOut_Button);
 
         // [START config_signin]
         // Configure Google Sign In
@@ -120,12 +120,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        signOutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signOut();
-            }
-        });
+
 
 
 
@@ -154,6 +149,9 @@ public class LoginActivity extends AppCompatActivity {
             if(task.isSuccessful()){
                 GoogleSignInAccount account = task.getResult(); // account 라는 데이터는 구글 로그인 정보를 담고있다. (닉네임 프로필 사진url, 이메일주소등등..)
                 firebaseAuthWithGoogle(account); // 로그인 결과 값 출력 수행하라는 메소드
+            }
+            else{
+                Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -188,12 +186,16 @@ public class LoginActivity extends AppCompatActivity {
                             UserFragment userFragment=new UserFragment();
                             userFragment.setArguments(bundle);
 
+
+                            HomeFragment homeFragment=new HomeFragment();
+                            homeFragment.setArguments(bundle);
+
                             intent.putExtras(bundle);
 
                             startActivity(intent);
 
 
-                            Toast.makeText(getApplicationContext(), "Complete", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "로그인 되었습니다", Toast.LENGTH_LONG).show();
 
                         } else {
                             // If sign in fails, display a message to the user.
@@ -228,7 +230,7 @@ public class LoginActivity extends AppCompatActivity {
                 new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(getApplicationContext(), "Complete", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "로그인 되셨습니다", Toast.LENGTH_LONG).show();
                     }
                 });
     }
@@ -242,7 +244,7 @@ public class LoginActivity extends AppCompatActivity {
                 new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(getApplicationContext(), "Complete", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "로그인 되셨습니다", Toast.LENGTH_LONG).show();
                     }
                 });
     }

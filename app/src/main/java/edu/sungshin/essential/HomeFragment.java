@@ -6,12 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
 
 public class HomeFragment extends Fragment {
 
     public Button btnWorkout,btnEnglish,btnAssignment;
+    TextView name;
+    String result;
 
 
     @Override
@@ -27,6 +32,21 @@ public class HomeFragment extends Fragment {
         btnWorkout = rootView.findViewById(R.id.btnWorkout);
         btnEnglish = rootView.findViewById(R.id.btnEnglish);
         btnAssignment = rootView.findViewById(R.id.btnAssignment);
+        name=rootView.findViewById(R.id.name);
+
+        Intent intentReceived = getActivity().getIntent();
+        Bundle data=intentReceived.getExtras();
+
+        if(data !=null){
+
+            result=data.getString("nickname"); //googlelogin_test에서 nickname 받아옴
+            name.setText(result);
+
+        }
+        else{
+            result="";
+
+        }
 
 
         btnWorkout.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.sungshin.essential">
-    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="essential03" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.Essential03">
+    <application android:allowBackup="true"
+        android:icon="@mipmap/ic_essential"
+        android:label="essential"
+        android:roundIcon="@mipmap/ic_essential_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Essential03">
         <activity android:name="edu.sungshin.essential.FragmentHomeHealth1Activity" android:exported="true"/>
         <activity android:name="edu.sungshin.essential.FragmentHomeHealth2Activity" android:exported="true"/>
         <activity android:name="edu.sungshin.essential.FragmentHomeHealth3Activity" android:exported="true"/>
