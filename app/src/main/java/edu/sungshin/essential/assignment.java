@@ -1,7 +1,6 @@
 package edu.sungshin.essential;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.essential03.R;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

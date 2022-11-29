@@ -1,6 +1,5 @@
 package edu.sungshin.essential;
 
-import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.essential03.R;
 
 import java.util.Locale;
 

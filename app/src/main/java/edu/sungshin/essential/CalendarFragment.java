@@ -3,7 +3,6 @@ package edu.sungshin.essential;
 import static android.content.Context.MODE_NO_LOCALIZED_COLLATORS;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,13 +12,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.essential03.R;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

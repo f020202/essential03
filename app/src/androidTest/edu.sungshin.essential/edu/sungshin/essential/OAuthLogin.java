@@ -1,4 +1,4 @@
-package edu.sungshin.essential;
+package com.example.essential03;
 
 public class OAuthLogin {
 }

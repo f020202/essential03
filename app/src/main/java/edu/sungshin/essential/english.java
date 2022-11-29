@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.essential03.R;
 
 public class english extends AppCompatActivity {
     private static final String TAG = "english";
